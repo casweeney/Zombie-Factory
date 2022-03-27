@@ -2,7 +2,7 @@ pragma solidity >=0.5.0 <0.6.0;
 
 contract ZombieFactory {
 
-    // declare our event here
+    //Step 7: declare our event here
     event NewZombie(uint zombieId, string name, uint dna);
 
     // Step 1: Declare variables
@@ -21,7 +21,7 @@ contract ZombieFactory {
     // Step 4: Create a private function that creates zombies and populates the zombies array
     function _createZombie(string memory _name, uint _dna) private {
         uint id = zombies.push(Zombie(_name, _dna)) - 1;
-        // and fire it here
+        // Step 8: and fire event here
         emit NewZombie(id, _name, _dna);
     }
 
